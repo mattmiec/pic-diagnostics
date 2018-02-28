@@ -28,7 +28,7 @@ else:
 plt.figure(1)
 plt.plot(t,re,t,im,t,am)
 plt.xlabel('$\Omega_i t$')
-plt.legend(['Real','Imaginary','Amplitude'])
+plt.legend(['Real','Imaginary','Amplitude'],loc=3)
 plt.savefig('lin'+str(modeno)+'.png')
 
 plt.figure(2)

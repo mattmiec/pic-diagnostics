@@ -32,7 +32,7 @@ for t in range(nt):
 f = plt.figure()
 a = f.gca()
 f.show()
-for t in range(0,nt,skip):
+for t in range(0,nt-1,skip):
   a.clear()
   a.pcolormesh(grid[:,:,t].T)
   f.suptitle('T = '+str(dt*t))

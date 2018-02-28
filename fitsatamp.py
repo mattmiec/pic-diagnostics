@@ -5,7 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import scipy.ndimage
 
-#call as timeplot.py modeno filename sigma maxtstep
+#call as fitsatamp.py modeno filename sigma maxtstep
 modeno = int(sys.argv[1])
 filename = sys.argv[2]
 sigma = int(sys.argv[3])

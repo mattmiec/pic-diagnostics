@@ -11,9 +11,17 @@ filename = sys.argv[2]
 
 data = np.genfromtxt(filename)
 
-t = data[:,0]
-re = data[:,2*modeno-1]
-im = data[:,2*modeno]
+if len(sys.argv) > 3:
+  maxnt = int(sys.argv[3])
+else:
+  maxnt = data.shape[0]
+
+
+data = np.genfromtxt(filename)
+
+t = data[:maxnt,0]
+re = data[:maxnt,2*modeno-1]
+im = data[:maxnt,2*modeno]
 am = np.sqrt(re**2+im**2)
 
 dt=t[1]-t[0]
