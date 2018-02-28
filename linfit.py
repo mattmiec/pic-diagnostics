@@ -10,6 +10,7 @@ modeno = int(sys.argv[1])
 filename = sys.argv[2]
 
 data = np.genfromtxt(filename)
+maxnt = data.shape[0]
 
 if len(sys.argv) > 3:
   maxnt = int(sys.argv[3])
