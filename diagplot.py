@@ -12,7 +12,12 @@ data = np.genfromtxt(filename)
 
 t = data[:,0]
 qx = data[:,1]
-w2 = data[:,2]
+w2i = data[:,2]
+w2e = data[:,3]
+kei = data[:,4]
+kee = data[:,5]
+fe = data[:,6]
+te = data[:,7]
 
 qx = scipy.ndimage.filters.gaussian_filter(qx,100)
 
@@ -26,8 +31,42 @@ plt.figure(2)
 plt.plot(t,w2)
 plt.yscale('log')
 plt.xlabel('$\Omega_i t$')
-plt.ylabel('$<w^2>$')
+plt.ylabel('$<w_i^2>$')
 plt.savefig('w2.png')
 
+plt.figure(3)
+plt.plot(t,w2)
+plt.yscale('log')
+plt.xlabel('$\Omega_i t$')
+plt.ylabel('$<w_e^2>$')
+plt.savefig('w2.png')
+
+plt.figure(4)
+plt.plot(t,w2)
+plt.yscale('log')
+plt.xlabel('$\Omega_i t$')
+plt.ylabel('Ion Kinetic Energy')
+plt.savefig('w2.png')
+
+plt.figure(5)
+plt.plot(t,w2)
+plt.yscale('log')
+plt.xlabel('$\Omega_i t$')
+plt.ylabel('Electron Kinetic Energy')
+plt.savefig('w2.png')
+
+plt.figure(6)
+plt.plot(t,w2)
+plt.yscale('log')
+plt.xlabel('$\Omega_i t$')
+plt.ylabel('Field Energy')
+plt.savefig('w2.png')
+
+plt.figure(7)
+plt.plot(t,w2)
+plt.yscale('log')
+plt.xlabel('$\Omega_i t$')
+plt.ylabel('Total Energy')
+plt.savefig('w2.png')
 
 plt.show()
