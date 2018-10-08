@@ -32,10 +32,12 @@ for t in range(nt):
 f = plt.figure()
 a = f.gca()
 f.show()
+mesh = a.pcolormesh(grid[:,:,0].T)
+cb = plt.colorbar(mesh, ax=a)
 for t in range(0,nt-1,skip):
   a.clear()
-  a.pcolormesh(grid[:,:,t].T)
+  mesh = a.pcolormesh(grid[:,:,t].T)
+  cb.update_bruteforce(mesh)
   f.suptitle('T = '+str(dt*t))
   f.canvas.draw()
   time.sleep(0.01)
-  
